@@ -9,6 +9,10 @@ public class test {
         CampanaDecorator campanaDecorator = new EffettoVento(campanaDin);
         Command command = new SuonoCommand(campanaDin);
         scheduler.setCommand(command);
+
+        CampanaBeeper campanaBeep = new CampanaBeeper();
+        command = new SuonoCommand(campanaBeep);
+        scheduler.setCommand(command);
         scheduler.suona();
     }
 }
